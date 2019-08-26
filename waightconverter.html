@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Waight Converter</title>
+
+<!--  Custom style Sheet -->
+
+ 
+<style>
+
+    body
+    {
+
+        background-color: #333;
+        color:#fff;
+    }
+</style>
+
+
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+    <div class="col-md-6">
+
+            <h1 class="display-4 text-center mt-5"> 
+            Waight convetor
+            </h1>
+
+        <form action="">
+
+            <div class="form-group " >
+                <input type="text" class="form-control" placeholder="Enter Pounds " id="lbsinput">
+            </div>
+            </form>
+
+
+    </div>
+
+     </div>
+<div id="output">
+
+<!--  Grams output  -->
+<div class="card bg-primary mb-2">
+    <div class="card-block">
+        <h2>Grams:</h2>
+        <div id="grams"></div>
+    </div>
+</div>
+
+
+
+<!--  labs output -->
+<div class="card bg-success mb-2">
+        <div class="card-block">
+            <h2>Kgs:</h2>
+            <div id="kgs"></div>
+        </div>
+    </div>
+    
+</div>
+
+</div> 
+<!--  Ending container Here -->
+
+
+<script>
+
+
+ document.getElementById('output').style.visibility='hidden';   
+
+
+var lbsinput= document.getElementById('lbsinput');
+
+lbsinput.addEventListener( 'keyup' , Convertor);
+ function Convertor ()
+{
+
+    document.getElementById('output').style.visibility='visible';   
+
+let lbs=lbsinput.value;
+
+ document.getElementById('grams').innerHTML=lbs/0.0022046;
+
+ document.getElementById('kgs').innerHTML=lbs/2.2046;
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

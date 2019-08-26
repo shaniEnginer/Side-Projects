@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS brocken chain</title>
+    <!-- link ti Finct awsome -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    #chain
+    {
+        font-size:50px;
+    }
+</style>
+
+</head>
+<body>
+ <div id="chain" class="fa "></div>
+    
+
+<script>
+    
+function test()
+{
+    
+
+    let my_chain=document.getElementById('chain');
+    my_chain.innerHTML="&#xf0c1;"
+    setTimeout( function()
+    {
+        my_chain.innerHTML="&#xf127;";
+    } ,1000);
+    
+}
+test();
+setInterval(test , 2000);
+</script>
+
+
+</body>
+</html>

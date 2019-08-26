@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter Able list with JS</title>
+
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+    
+<div class="container">
+
+<h1 class="center-align">
+    Filterabli List
+</h1>
+<input type="text" id="Nameinput">
+
+<ul class="collection with-header" id="names">
+
+<li class="collection-header">
+A
+</li>
+
+<li class="collection-item">
+<a href="#">Ali</a>
+</li>
+<li class="collection-item">
+        <a href="#">Ali hassan</a>
+</li>
+<li class="collection-item">
+        <a href="#">Aasd</a>
+</li>
+<li class="collection-item">
+        <a href="#">Ahmed</a>
+</li>
+
+
+<li class="collection-header">
+        B
+        </li>
+        
+        <li class="collection-item">
+        <a href="#">Babur</a>
+        </li>
+        <li class="collection-item">
+                <a href="#">Babu</a>
+        </li>
+        <li class="collection-item">
+                <a href="#">Brahum</a>
+        </li>
+        <li class="collection-item">
+                <a href="#">bail</a>
+        </li>
+        
+</ul>
+
+
+
+</div>
+
+<script>
+
+
+var input=document.getElementById('Nameinput');
+
+input.addEventListener('keyup' , filterInput);
+ function filterInput()
+ {
+
+valueInInput=input.value.toUpperCase();
+//console.log(valueInInput);
+var names= document.getElementById('names');
+let lis=names.querySelectorAll('li.collection-item');
+
+
+for( let i=0; i<lis.length;i++)
+{
+ 
+let anchor=lis[i].getElementsByTagName('a')[0];
+//console.log(anchor);
+
+// if matched 
+
+if(anchor.innerHTML.toUpperCase().indexOf(valueInInput) >-1)
+{
+    lis[i].style.display='';
+}
+else
+{
+    lis[i].style.display='none';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+ }
+
+
+</script>
+
+
+
+
+</body>
+</html>
